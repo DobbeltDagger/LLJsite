@@ -1,0 +1,132 @@
+/* wide menu */
+#menuWrapper {
+  transition: all 250ms;
+}
+#menuWrapper .menuUl {
+  list-style-type: none;
+  margin: 0px;
+  display: block;
+  float: right;
+  width: 100%;
+  text-align: right;
+}
+#menuWrapper .menuUl li {
+  display: inline-block;
+  width: auto;
+  padding-left: 2rem;
+}
+#menuWrapper .menuUl li:first-child {
+  padding-left: 0;
+}
+#menuWrapper .menuUl li a {
+  display: inline-block;
+  text-decoration: none;
+}
+#menuWrapper .menuUl li a:hover {
+  text-decoration: underline;
+}
+/* active menu is lined */
+#menuWrapper .menuUl li a.activeAnchor {
+  text-decoration: line-through;
+}
+
+/* collapsible menuWrapper */
+#collapseMenuWrapper .menuUl {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  width: 100%;
+}
+#collapseMenuWrapper .menuUl li {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+#collapseMenuWrapper .menuUl li:first-child {
+  margin-top: 1rem;
+}
+#collapseMenuWrapper .menuUl li a {
+  display: block;
+  float: left;
+  width: 100%;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  line-height: 1.5em;
+  padding: 0.5rem 0px;
+}
+#collapseMenuWrapper .menuUl li a:hover {
+  font-weight: 700;
+}
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+@media screen {
+
+
+  /* hide wide menu */
+  #menuWrapper {
+    display: none;
+  }
+
+  /* collapsible menu wrapper */
+  #collapseMenuWrapper {
+    /* border: 1px solid red; */
+    margin-top: 0px;
+  }
+  #collapseMenuWrapper.hidden {
+    max-height: 0px;
+    overflow: hidden;
+  }  
+
+
+  /* menu button */
+  .menuBtnWrapper {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0rem;
+  }
+  .menuBtnWrapper a {
+    display: block;
+    float: left;
+    padding: 1.8rem 1rem 1rem 0px; /* 1rem 1rem 0px 0px; */
+  }
+  .menuBtnWrapper a img {
+    display: block;
+    float: left;
+    width: 2rem;
+    height: 2rem;
+  }
+  #menuBtn img {
+    transition: transform 200ms;
+    transform: rotate(0deg);
+  }
+  #menuBtn.down img {
+    transform: rotate(180deg);
+  }
+
+
+}
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+@media screen and (min-width: 800px) {
+
+  /* SHOW wide menu */
+  #menuWrapper {
+    display: block;
+    float: right;
+    width: calc(100% - 250px);
+  }
+
+  .menuBtnWrapper {
+    display: none;
+  }
+  
+  /* HIDE collapsible menu */
+  #collapseMenuWrapper {
+    display: none;
+  }
+
+}

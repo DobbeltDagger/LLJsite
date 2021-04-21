@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LLJ FOTOGRAFI</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="lorem">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="/assets/images/favicon.png" sizes="128x128" type="image/png">
+  <script src='/assets/js/functions.js'></script>
+  <!-- <script src='/assets/js/newMasonry.js'></script> -->
+  <!-- <link href='/assets/js/wa-mediabox.min.js' /> -->
+  <script src='/assets/js/wa-mediabox.js'></script>
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
+  <script src="/assets/js/swiper-bundle.min.js"></script>  
+  <!-- <link href="/assets/css/newMasonry.css" rel="stylesheet" /> -->
+  <link href="/assets/css/normalize.css" rel="stylesheet" />
+  <link href="/assets/css/Grid.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+  <link href='/assets/css/wa-mediabox.css' rel="stylesheet" />
+  <link href="/assets/css/menu.css" rel="stylesheet" />
+  <link href="/assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="pageWrapper">
+
+    <header>
+
+  <!-- menu .. Denne menu er kun vist OVER 800px -->
+  <div id='menuWrapper'>
+    <ul class="menuUl"><li class="listItem"><a href="/work/" class="anchor">Work</a></li>
+<li class="listItem"><a href="/about/" class="anchor">About</a></li>
+<li class="listItem"><a href="/test/" class="anchor">Test</a></li>
+<li class="listItem"><a href="/contact/" class="anchor">Contact</a></li></ul>
+  </div>
+
+  <div id='logoWrapper'>
+    <a href='/'>LLJ FOTOGRAFI</a>
+  </div>
+
+  <!-- open/close menu button -->
+  <div class='menuBtnWrapper'>
+    <a id='menuBtn' href=''><img src='/assets/images/arrow-down-solid.svg'/></a>
+  </div>
+
+  <!-- collapsible menu .. Denne menu er kun vist UNDER 800px -->
+  <div id='collapseMenuWrapper' class='hidden'>
+    <ul class="menuUl"><li class="listItem"><a href="/work/" class="anchor">Work</a></li>
+<li class="listItem"><a href="/about/" class="anchor">About</a></li>
+<li class="listItem"><a href="/test/" class="anchor">Test</a></li>
+<li class="listItem"><a href="/contact/" class="anchor">Contact</a></li></ul>
+  </div>
+
+
+</header>
+    
+
+  <!-- bg -->
+  <div class='bgWrapper'></div>
+
+  <div class="Grid Grid--gutters Grid--full large-Grid--fit">
+    <div class="Grid-cell">
+      <div class='programWrapper'>
+        
+          <a href='/work/'><img src='assets/images/programStoreBilleder/DeathOrGloryPoster.jpg' alt='DEMOdemo or Glory' title='DEMOdemo or Glory'/></a>
+        
+      </div>
+    </div>
+  </div>
+  
+
+  
+
+  <!-- øvrige program-punkter herunder?? -->
+  <div class='belowProgramWrapper'>
+
+    <div class='insideCol'>
+
+      <!-- overskrift -->
+      <div class="Grid Grid--gutters Grid--full large-Grid--fit">
+        <div class="Grid-cell">
+          <h2>Upcoming</h2>
+        </div>
+      </div>
+
+      <!-- grid, upcoming program items -->
+      <div class="belowProgramWrapper">
+
+        <div class="Grid Grid--gutters Grid--full large-Grid--fit">
+          <div class="Grid-cell">
+            
+              <div class='prog'>
+                <h3><a href='/work/'>skabelonProgram</a> &rarr;</h3>
+                <p>Dette er en demo. Lad være at slette denne fil, men sæt <code>eleventyExcludeFromCollections: false</code> til &quot;true&quot;, så dette programpunkt bliver skjult fra siden, men tilgængelig i <em>programCollection</em>-folderen.</p>
+
+              </div>
+            
+          </div>
+        </div>
+
+      </div>
+
+    </div> <!-- eof insideColumn -->
+
+  </div> <!-- eof belowProgramWrapper -->
+
+
+
+  </div>
+
+  <!-- scripts -->
+  <script>
+    // all is loaded
+    window.addEventListener("DOMContentLoaded", function() {
+
+      // setup menu button
+      const menuBtn = document.getElementById('menuBtn');
+      menuBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        console.log("menu was clicked");
+        console.log("this", this);
+
+        // change visibility on menu
+        const menuElm = document.getElementById('collapseMenuWrapper');
+        
+        if (menuElm.classList.contains('hidden') === true) {
+          menuElm.classList.remove('hidden');
+          this.classList.add('down');
+        } else {
+          menuElm.classList.add('hidden');
+          this.classList.remove('down');
+        }
+
+      })
+
+      var swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal', // 'vertical',
+        loop: true,
+
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+
+      // put class and target on external links
+      linkopener(true);
+    })
+  </script>
+</body>
+

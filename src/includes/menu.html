@@ -1,0 +1,45 @@
+<header>
+
+  <!-- menu .. Denne menu er kun vist OVER 800px -->
+  <div id='menuWrapper'>
+    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
+      listElement: "ul",
+      listItemElement: "li",
+      listClass: "menuUl",
+      listItemClass: "listItem",
+      listItemHasChildrenClass: "hasChildren",
+      activeListItemClass: "active",
+      anchorClass: "anchor",
+      activeAnchorClass: "activeAnchor",
+      activeKey: eleventyNavigation.key,
+      showExcerpt: false
+    }) | safe }}
+  </div>
+
+  <div id='logoWrapper'>
+    <a href='/'>LLJ FOTOGRAFI</a>
+  </div>
+
+  <!-- open/close menu button -->
+  <div class='menuBtnWrapper'>
+    <a id='menuBtn' href=''><img src='/assets/images/arrow-down-solid.svg'/></a>
+  </div>
+
+  <!-- collapsible menu .. Denne menu er kun vist UNDER 800px -->
+  <div id='collapseMenuWrapper' class='hidden'>
+    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
+      listElement: "ul",
+      listItemElement: "li",
+      listClass: "menuUl",
+      listItemClass: "listItem",
+      listItemHasChildrenClass: "hasChildren",
+      activeListItemClass: "active",
+      anchorClass: "anchor",
+      activeAnchorClass: "activeAnchor",
+      activeKey: eleventyNavigation.key,
+      showExcerpt: false
+    }) | safe }}
+  </div>
+
+
+</header>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kunstnersite</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="lorem">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="/assets/images/favicon.png" sizes="128x128" type="image/png">
+  <script src='/assets/js/functions.js'></script>
+  <!-- <script src='/assets/js/newMasonry.js'></script> -->
+  <!-- <link href='/assets/js/wa-mediabox.min.js' /> -->
+  <script src='/assets/js/wa-mediabox.js'></script>
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
+  <script src="/assets/js/swiper-bundle.min.js"></script>  
+  <!-- <link href="/assets/css/newMasonry.css" rel="stylesheet" /> -->
+  <link href="/assets/css/normalize.css" rel="stylesheet" />
+  <link href="/assets/css/Grid.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+  <link href='/assets/css/wa-mediabox.css' rel="stylesheet" />
+  <link href="/assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="pageWrapper">
+
+    <div class='leftCol'>
+      <header>
+
+  <div id='logoWrapper'>
+    <a href='/'>kunstner</a>
+  </div>
+
+  <!-- navIcon -->
+  <!-- <div id='navIconWrapper'>
+    <a id='navIconBtn' href=''><img src='/assets/images/navIcon7.png'/></a>
+  </div> -->
+
+  <div class='menuWrapper'>
+    <ul class="headerNav"><li class="listItem"><a href="/" class="anchor">Frontpage</a></li>
+<li class="listItem"><a href="/work/" class="anchor">Work</a></li>
+<li class="listItem"><a href="/about/" class="anchor">About</a></li></ul>
+  </div>
+
+</header>
+    </div>
+    <div class='rightCol'>
+      
+
+  <div class='insideCol'>
+
+    <!-- GRID -->
+    <div class="Grid Grid--gutters Grid--full large-Grid--fit">
+
+      <!-- left col -->
+      <div class="Grid-cell">
+        <p><img src='/assets/images/udstillingerStoreBilleder/5.jpg'/></p>
+        <h2>🕱 or Glory</h2>
+        <p>Cantina presents:<br>
+🕱 OR GLORY<br>
+Victor Daamouche<br>
+Dejode &amp; Lacombe<br>
+Jean-Baptiste Janisset<br>
+Victor Yudaev</p>
+<p>Exhibition period: 1.05 – 30.05.2021<br>
+Opening on the 30th of april 3pm-8pm<br>
+Open thursdays and saturdays from 1pm-5pm or by appointment.</p>
+<p>☠ or Glory will be Cantina's first exhibition in 2021. The show is curated by Jean-Baptiste Janisset and will bring together four french artists based in Marseille: Dejode &amp; Lacombe, Victor Yudaev, Victor Daamouche and Jean-Baptiste Janisset himself.<br>
+The exhibition is supported by Kirsten &amp; Gunnar Fonden, Statens Kunstfond and Aarhus Kommune.<br>
+The opening will take place on the 30th of april in respect of the covid restrictions and in the presence of the artists.<br>
+_</p>
+<p>«WHEN IS THE DEPARTURE ?*<br>
+Space is the place – nothing like a wilderness or a wasteland though, nor a desert nor a sea, despite the specific quality of sound, these dull continuous layers that can be heard and that may be (or is, how could you even be sure?) the figment of the imagination. Despite even the poet's similarity of planets with islands and harbours. It is the liquid preventing any movement and tolling in the shell of an overburdened skull.
+Space is the place, and it is all the places, the abolition long accepted of anything meant by words you could no longer comprehend, directions you can no longer take, what was once called behind or South, North or low, spreading or West, left or East. It contains all the images that keep dwelling on in an endless scrolling and yet it pertains to them, as they go more imprecise and more dimmed - that is : it is taken for granted that distances grow.<br>
+Space is the place, it is the center and the margin, and all the distances in-between: infinite fractal series of Rømer parallaxes unfold more universes than a responsive eye can see, more destinations than a solar wind can reach, more stages than any measurement can differentiate.</p>
+<p>For three days and three nights, three million light-years and three seconds, the belly of this vessel was the only shelter where to rest, where to be relieved from any quest for a path, trusting the giant to repulse torn lots on the shore, whatever the strand – for as long as there is a wreck, the destiny is fulfilled, the prophecy accomplished. The fate abdicated to the bays of another eagerness; former beliefs and autonomy, long-standing ambitions and resolutions, estranged feelings of love or desire, are now decommissioned. They joined the holy dance of scattered thoughts hovering in the limbo. For space is a lively cotton fog in which clouds barely form, from which rain barely drops – hence the palm shriveled, desiccated and eventually fell in powder, and resentment came to shrink the dream to the dimension of a single impotent cell. Hands are useless as feet and seeds cannot plough the steel ground.</p>
+<p>There was a code, a grammar, a language, likely to grip objects, more rarely sensations, to connect and alienate, to name and possess, to seduce and betray – from the window, infinity appears so clear, so crystal clear. How could these depths of vacuum possibly be called a haze? Merely a wall, within the thickness of which protrusions became still.</p>
+<p>Space is now my place, I’m home, alone and related to the whole, floating and crashed, exploring and blind, defeated and heroic. Space is my cave and my resurrection. Paradise lost – or glory.</p>
+<p>*You are already on your way. »<br>
+Andreï Tarkovski, Solaris, 1972</p>
+<p>Exhibition text by Jean-Christophe Arcos</p>
+
+        <!-- <div class='backToArrow'><a href='/exhibitions'>&larr; tilbage</a></div> -->
+      </div>
+    </div>
+
+    <!-- gallery -->
+    
+
+    <!-- slideshow, swiperjs-->
+    
+
+    <!-- lightbox -->
+        
+
+
+  </div> <!-- eof grid -->
+
+
+
+    </div>
+
+  </div>
+
+  <!-- scripts -->
+  <script>
+    // all is loaded
+    window.addEventListener("DOMContentLoaded", function() {
+
+      var swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal', // 'vertical',
+        loop: true,
+
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+
+      // put class and target on external links
+      linkopener(true);
+    })
+  </script>
+</body>
+
